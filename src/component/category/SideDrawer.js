@@ -18,13 +18,13 @@ export default function SideDrawer() {
           </div>
           <div className={style.list_box}>
             <ul>
-              <li>공연시간표</li>
+              <li>공연 시간표</li>
               <li>푸드트럭</li>
               <li>동아리 부스</li>
               <li>축제 지도</li>
+              <li id={style.about}>About us</li>
             </ul>
           </div>
-          <div className={style.about_us}>About us</div>
         </div>
       )}
     </>

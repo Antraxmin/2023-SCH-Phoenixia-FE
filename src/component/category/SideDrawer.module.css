@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Braah+One&display=swap");
+
 .side_drawer {
   position: fixed;
   left: 0;
@@ -53,4 +55,10 @@
   margin: 20px;
   font-size: 25px;
   cursor: pointer;
+  font-family: "Black Han Sans";
+}
+
+#about {
+  font-size: 15px;
+  margin: 50px;
 }
