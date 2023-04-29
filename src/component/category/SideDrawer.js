@@ -24,6 +24,7 @@ export default function SideDrawer() {
               <li>축제 지도</li>
             </ul>
           </div>
+          <div className={style.about_us}>About us</div>
         </div>
       )}
     </>
