@@ -10,4 +10,36 @@
   cursor: pointer;
   max-width: 390px;
   margin: 0 auto;
+  background-color: blueviolet;
+}
+
+.btn_box {
+  background-color: darkgoldenrod;
+  padding: 20px;
+  display: flex;
+}
+
+.btn_box img {
+  margin-left: auto;
+}
+
+.list_box {
+  background-color: bisque;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list_box ul {
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list_box ul li {
+  background-color: chartreuse;
+  margin: 20px;
+  font-size: 20px;
 }
