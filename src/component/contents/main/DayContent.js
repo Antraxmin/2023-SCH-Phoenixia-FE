@@ -1,34 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./DayContent.module.css";
 import HalfMoonDay from "./HalfMoonDay";
 import FullMoonDay from "./FullMoonDay";
 import NewMoonDay from "./NewMoonDay";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function DayContent() {
+  const settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+  };
+
   return (
-    <div>
-      <ul className={style.dayListBox}>
-        <li className={style.dayListItem}>
+    <div className={style.carousel}>
+      <Slider {...settings}>
+        <div className={style.day_info_box}>
           <NewMoonDay />
-        </li>
-        <li className={style.dayListItem}>
+        </div>
+        <div className={style.day_info_box}>
           <HalfMoonDay />
-        </li>
-        <li className={style.dayListItem}>
+        </div>
+        <div className={style.day_info_box}>
           <FullMoonDay />
-        </li>
-      </ul>
-      <div className={style.selectBtn}>
-        <div className={style.btn1}>
-          <button type="button">Day 1</button>
         </div>
-        <div className={style.btn2}>
-          <button type="button">Day 2</button>
-        </div>
-        <div className={style.btn3}>
-          <button type="button">Day 3</button>
-        </div>
-      </div>
+      </Slider>
     </div>
   );
 }

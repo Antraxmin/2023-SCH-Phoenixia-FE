@@ -10,7 +10,7 @@ export default function NewMoonDay() {
             <img src="../img/new_moon.png" width={35} />
           </div>
         </div>
-        <div className={style.text}>Half Moon Day</div>
+        <div className={style.text}>New Moon Day</div>
         <div className={style.artist}>1일차 아티스트</div>
       </div>
     </>

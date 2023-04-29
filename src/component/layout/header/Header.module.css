@@ -4,3 +4,7 @@
   /* background-color: aqua; */
   padding: 10px;
 }
+
+.header img {
+  cursor: pointer;
+}

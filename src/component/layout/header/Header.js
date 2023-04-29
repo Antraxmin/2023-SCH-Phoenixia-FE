@@ -11,14 +11,13 @@ export default function Header() {
       {drawerIsOpen == true ? <SideDrawer /> : null}
       <header className={style.header}>
         <div className={style.header_content}>
-          <div className={style.header_sidebar_btn}>
-            <img
-              src="./img/app_bar.svg"
-              alt=""
-              onClick={() => {
-                setDrawerIsOpen(!drawerIsOpen);
-              }}
-            />
+          <div
+            className={style.header_sidebar_btn}
+            onClick={() => {
+              setDrawerIsOpen(!drawerIsOpen);
+            }}
+          >
+            <img src="./img/app_bar.svg" alt="" />
           </div>
         </div>
       </header>
