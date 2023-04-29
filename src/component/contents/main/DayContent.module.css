@@ -1,0 +1,92 @@
+.dayListBox {
+  /* background-color: blueviolet; */
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.dayListItem {
+  flex: 0 0 auto;
+  margin: 10px;
+  margin-top: 0px;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.day_info_box {
+  /* background-color: bisque; */
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 230px;
+  border-radius: 10px;
+}
+
+.moon {
+  margin: 0px;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.text {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  font-family: "S-CoreDream-3Light";
+}
+
+.artist {
+  margin-top: 15px;
+  background-color: lightgray;
+  padding: 10px;
+  height: 55vh;
+  border-radius: 10px;
+  box-shadow: 1px 1px darkgrey;
+  font-family: "S-CoreDream-3Light";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectBtn {
+  height: 60px;
+  width: 390px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectBtn div {
+  margin: 5px;
+}
+
+.selectBtn div button {
+  width: 70px;
+  height: 30px;
+  border: none;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  font-family: "S-CoreDream-3Light";
+  box-shadow: 0.5px 0.5px 5px darkgray;
+}
+
+.selectBtn div button:hover {
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+}
