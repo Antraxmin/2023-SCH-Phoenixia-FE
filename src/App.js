@@ -1,5 +1,8 @@
+import "./component/layout/global.css";
+import WrapContent from "./component/layout/wrap/WrapContent";
+
 function App() {
-  return <div>Hello</div>;
+  return <WrapContent />;
 }
 
 export default App;
