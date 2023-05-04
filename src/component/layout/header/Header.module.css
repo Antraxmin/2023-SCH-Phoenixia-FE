@@ -2,7 +2,10 @@
   width: 100%;
   max-width: 390px;
   /* background-color: aqua; */
-  padding: 10px;
+  padding-left: 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
 .header img {

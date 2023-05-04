@@ -17,7 +17,7 @@ export default function Header() {
               setDrawerIsOpen(!drawerIsOpen);
             }}
           >
-            <img src="./img/app_bar.svg" alt="" />
+            <img src="./img/app_bar_light.png" alt="" width={18} />
           </div>
         </div>
       </header>
