@@ -1,7 +1,7 @@
 import About from "./component/category/About";
-import Booth from "./component/category/Booth";
+import Booth from "./component/Booth/Booth";
 import FoodTruck from "./component/category/FoodTruck";
-import MapContent from "./component/category/MapContent";
+import MapContent from "./component/Map/MapContent";
 import TimeTable from "./component/category/TimeTable";
 import MainContent from "./component/contents/main/MainContent";
 import "./global.css";
