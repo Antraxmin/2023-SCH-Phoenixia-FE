@@ -34,7 +34,6 @@
 
 .moon {
   margin: 0px;
-  background-color: white;
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -47,13 +46,12 @@
   display: flex;
   justify-content: center;
   font-family: "S-CoreDream-3Light";
+  color: white;
 }
 
 .artist {
   margin-top: 15px;
-  background-color: lightgray;
   border-radius: 10px;
-  box-shadow: 1px 1px darkgrey;
   font-family: "S-CoreDream-3Light";
   display: flex;
   justify-content: center;

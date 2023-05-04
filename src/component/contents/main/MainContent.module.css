@@ -21,11 +21,11 @@
 }
 
 .logo {
-  background-color: lightsteelblue;
   width: 100%;
   height: 10vh;
   font-family: "S-CoreDream-3Light";
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }

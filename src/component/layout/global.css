@@ -17,6 +17,7 @@ body {
   font: normal 14px/1 "Montserrat", "Nanum Gothic", "Noto Sans";
   color: #333;
   background: #fff;
+  background-image: url("/public/img/background.jpg");
 }
 ul {
   list-style: none;
