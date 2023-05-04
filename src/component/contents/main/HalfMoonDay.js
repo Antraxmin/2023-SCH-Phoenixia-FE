@@ -11,7 +11,7 @@ export default function HalfMoonDay() {
           </div>
         </div>
         <div className={style.text}>Half Moon Day</div>
-        <div className={style.artist}>2일차 아티스트</div>
+        <img className={style.artist} src="../img/day2_artist.png" />
       </div>
     </>
   );

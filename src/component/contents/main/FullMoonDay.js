@@ -11,7 +11,7 @@ export default function FullMoonDay() {
           </div>
         </div>
         <div className={style.text}>Full Moon Day</div>
-        <div className={style.artist}>3일차 아티스트</div>
+        <img className={style.artist} src="../img/day3_artist.png" />
       </div>
     </>
   );

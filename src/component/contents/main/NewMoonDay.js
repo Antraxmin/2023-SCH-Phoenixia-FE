@@ -11,7 +11,7 @@ export default function NewMoonDay() {
           </div>
         </div>
         <div className={style.text}>New Moon Day</div>
-        <div className={style.artist}>1일차 아티스트</div>
+        <img className={style.artist} src="../img/day1_artist.png" />
       </div>
     </>
   );

@@ -25,10 +25,9 @@
 
 .day_info_box {
   /* background-color: bisque; */
-  padding: 10px;
   padding-top: 0px;
   padding-bottom: 0px;
-  width: 250px;
+  width: 267px;
   border-radius: 10px;
   margin: 0 0 auto;
 }
@@ -53,14 +52,14 @@
 .artist {
   margin-top: 15px;
   background-color: lightgray;
-  padding: 10px;
-  height: 55vh;
   border-radius: 10px;
   box-shadow: 1px 1px darkgrey;
   font-family: "S-CoreDream-3Light";
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 267px;
+  height: 400px;
 }
 
 .selectBtn {
