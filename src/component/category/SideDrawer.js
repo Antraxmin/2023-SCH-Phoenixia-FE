@@ -23,7 +23,9 @@ export default function SideDrawer() {
               <li>
                 <Link to="/foodtruck">푸드트럭</Link>
               </li>
-              <li>동아리 부스</li>
+              <li>
+                <Link to="/booth">동아리/부스</Link>
+              </li>
               <li>
                 <Link to="/map">축제 지도</Link>
               </li>
