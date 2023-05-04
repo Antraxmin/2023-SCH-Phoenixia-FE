@@ -31,7 +31,9 @@ export default function SideDrawer() {
               <li>
                 <Link to="/map">축제 지도</Link>
               </li>
-              <li id={style.about}>About us</li>
+              <li id={style.about}>
+                <Link to="/about">About us</Link>
+              </li>
             </ul>
           </div>
         </div>

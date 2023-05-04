@@ -1,4 +1,4 @@
-import About from "./component/category/About";
+import About from "./component/about/About";
 import Booth from "./component/Booth/Booth";
 import FoodTruck from "./component/FoodTruck/FoodTruck";
 import MapContent from "./component/Map/MapContent";
