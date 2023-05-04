@@ -2,7 +2,7 @@ import About from "./component/category/About";
 import Booth from "./component/Booth/Booth";
 import FoodTruck from "./component/FoodTruck/FoodTruck";
 import MapContent from "./component/Map/MapContent";
-import TimeTable from "./component/category/TimeTable";
+import TimeTable from "./component/timetable/TimeTable";
 import MainContent from "./component/contents/main/MainContent";
 import "./global.css";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";

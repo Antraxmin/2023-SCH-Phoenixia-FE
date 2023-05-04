@@ -19,7 +19,9 @@ export default function SideDrawer() {
           </div>
           <div className={style.list_box}>
             <ul>
-              <li>공연 시간표</li>
+              <li>
+                <Link to="/timetable">공연 시간표</Link>
+              </li>
               <li>
                 <Link to="/foodtruck">푸드트럭</Link>
               </li>
