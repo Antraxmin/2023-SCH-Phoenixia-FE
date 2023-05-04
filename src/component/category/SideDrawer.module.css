@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Braah+One&display=swap");
+@font-face {
+  font-family: "GongGothicMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .side_drawer {
   position: fixed;
@@ -53,9 +59,9 @@
 .list_box ul li {
   /* background-color: chartreuse; */
   margin: 20px;
-  font-size: 25px;
+  font-size: 20px;
   cursor: pointer;
-  font-family: "Black Han Sans";
+  font-family: "GongGothicMedium";
 }
 
 #about {
