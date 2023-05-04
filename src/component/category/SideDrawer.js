@@ -20,7 +20,9 @@ export default function SideDrawer() {
           <div className={style.list_box}>
             <ul>
               <li>공연 시간표</li>
-              <li>푸드트럭</li>
+              <li>
+                <Link to="/foodtruck">푸드트럭</Link>
+              </li>
               <li>동아리 부스</li>
               <li>
                 <Link to="/map">축제 지도</Link>
