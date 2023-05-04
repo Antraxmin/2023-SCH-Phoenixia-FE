@@ -1,7 +1,9 @@
+import style from "./FoodTruckListBox.module.css";
+
 export default function FoodTruckListBox() {
   return (
     <>
-      <div>test</div>
+      <div className={style.container}>test</div>
     </>
   );
 }

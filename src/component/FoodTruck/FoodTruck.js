@@ -2,11 +2,12 @@ import React from "react";
 import style from "./FoodTruck.module.css";
 import { useState } from "react";
 import SideDrawer from "../category/SideDrawer";
+import FoodTruckListBox from "./FoodTruckListBox";
 
 export default function FoodTruck() {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
-  food_data = {
+  const food_data = {
     info: [
       {
         name: "꼬꼬닭꼬치",
@@ -50,7 +51,7 @@ export default function FoodTruck() {
         </header>
         <main>
           <div className={style.foodtruck_list}>
-            {/*여기에 푸드트럭 data 컴포넌트 반복 map*/}
+            <FoodTruckListBox />
           </div>
         </main>
       </div>
