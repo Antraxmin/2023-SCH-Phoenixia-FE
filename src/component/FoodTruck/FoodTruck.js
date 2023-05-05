@@ -12,41 +12,41 @@ export default function FoodTruck() {
       name: "꼬꼬닭꼬치",
       description:
         "안녕하세요. 꼬꼬닭꼬치입니다. 저희는 데리야끼 닭꼬치가 주력메뉴입니다.",
-      image: "./img/koko.jpg",
+      image: "./img/koko.JPG",
     },
     {
       name: "인생타코",
       description: "멕시코가 그대로! 인생타코입니다",
-      image: "./img/taco.jpg",
+      image: "./img/taco.JPG",
     },
     {
       name: "청년스테이크",
       description:
         "청년스테이크입니다. 저희는 청정호주산 소고기만 사용하여 아주 맛있습니다",
-      image: "./img/stake.jpg",
+      image: "./img/stake.JPG",
     },
     {
       name: "하와이 드링크",
       description: "축제에는 시원한 음료가 빠지면 섭섭하죠!",
-      image: "./img/hawaii.jpg",
+      image: "./img/hawaii.JPG",
     },
     {
       name: "맨해튼버거",
       description:
         "뉴욕 맨해튼에서 먹던 맛 그대로. 정통 미국식 수제버거 푸드트럭입니다",
-      image: "./img/burger.jpg",
+      image: "./img/burger.JPG",
     },
     {
       name: "버거",
       description:
         "뉴욕 맨해튼에서 먹던 맛 그대로. 정통 미국식 수제버거 푸드트럭입니다",
-      image: "./img/koko.jpg",
+      image: "./img/koko.JPG",
     },
     {
       name: "감자",
       description:
         "뉴욕 맨해튼에서 먹던 맛 그대로. 정통 미국식 수제버거 푸드트럭입니다",
-      image: "./img/hawaii.jpg",
+      image: "./img/hawaii.JPG",
     },
   ];
   return (
