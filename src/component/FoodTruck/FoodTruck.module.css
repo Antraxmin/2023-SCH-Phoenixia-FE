@@ -12,6 +12,7 @@
   max-width: 390px;
   margin: 0 auto;
   background-color: white;
+  overflow: scroll;
 }
 
 .header {

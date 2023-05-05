@@ -1,19 +1,26 @@
 @font-face {
-  font-family: "GongGothicMedium";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff")
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
     format("woff");
-  font-weight: normal;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-Black";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff")
+    format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 .container {
   padding: 10px;
-  margin-top: 10px;
   height: 100px;
   display: flex;
   align-items: center;
   border: 1px solid lightgray;
-  font-family: "GongGothicMedium";
+  font-family: "Pretendard-Bold";
 }
 
 .content {
@@ -47,6 +54,7 @@
   padding: 5px;
   font-size: 16px;
   margin-bottom: 5px;
+  font-family: "Pretendard-Black";
 }
 
 .discription {

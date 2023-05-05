@@ -1,18 +1,15 @@
 import style from "./FoodTruckListBox.module.css";
 
-export default function FoodTruckListBox() {
+export default function FoodTruckListBox({ food }) {
   return (
     <>
       <div className={style.container}>
         <div className={style.content}>
-          <img src="../img/koko.jpg"></img>
+          <img src={food.image}></img>
 
           <div className={style.info}>
-            <div className={style.title}>꼬꼬닭꼬치</div>
-            <div className={style.discription}>
-              안녕하세요. 꼬꼬닭꼬치입니다. 저희는 데리야끼 닭꼬치가
-              주력메뉴입니다
-            </div>
+            <div className={style.title}>{food.name}</div>
+            <div className={style.discription}>{food.description}</div>
           </div>
         </div>
       </div>
