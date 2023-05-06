@@ -3,6 +3,8 @@ import style from "./FoodTruck.module.css";
 import { useState } from "react";
 import SideDrawer from "../category/SideDrawer";
 import FoodTruckListBox from "./FoodTruckListBox";
+import appbar from "../../img/common/app_bar_dark.png";
+import styled from "styled-components";
 
 export default function FoodTruck() {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
@@ -52,26 +54,64 @@ export default function FoodTruck() {
   return (
     <>
       {drawerIsOpen == true ? <SideDrawer /> : null}
-      <div className={style.container}>
-        <header className={style.header}>
-          <img
-            src="./img/app_bar_dark.png"
-            alt=""
-            width={18}
+      <Container>
+        <Header>
+          <AppbarImg
             onClick={() => {
               setDrawerIsOpen(!drawerIsOpen);
             }}
           />
-          <p>푸드트럭</p>
-        </header>
-        <main>
-          <div className={style.foodtruck_list}>
+          <HeaderTitle>푸드트럭</HeaderTitle>
+        </Header>
+        <Main>
+          <FoodtruckList>
             {food_data.map((food) => (
               <FoodTruckListBox food={food} key={food.id} />
             ))}
-          </div>
-        </main>
-      </div>
+          </FoodtruckList>
+        </Main>
+      </Container>
     </>
   );
 }
+
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  background-color: white;
+`;
+
+const Header = styled.header`
+  width: 100%;
+  max-width: 390px;
+  padding-left: 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+`;
+
+const HeaderTitle = styled.div`
+  padding-left: 30px;
+  font-size: 20px;
+  font-family: "GongGothicMedium";
+  padding-top: 5px;
+`;
+
+const AppbarImg = styled.img.attrs({
+  src: `${appbar}`,
+})`
+  width: 18px;
+  cursor: pointer;
+`;
+
+const Main = styled.main`
+  overflow: hidden;
+  height: 100vh;
+`;
+
+const FoodtruckList = styled.div`
+  overflow-y: scroll;
+  height: 100%;
+`;
