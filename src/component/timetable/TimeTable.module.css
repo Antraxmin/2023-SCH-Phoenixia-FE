@@ -8,10 +8,11 @@
 
 .container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   max-width: 390px;
   margin: 0 auto;
   background-color: white;
+  overflow-y: scroll;
 }
 
 .header {
@@ -21,6 +22,7 @@
   height: 70px;
   display: flex;
   align-items: center;
+  /* border-bottom: 1px solid gray; */
 }
 
 .header p {
@@ -32,4 +34,28 @@
 
 .header img {
   cursor: pointer;
+}
+
+.date {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+}
+
+.date_container {
+  height: 60px;
+  background-color: blueviolet;
+}
+
+.table {
+  margin-top: 10px;
+  height: 100vh;
+  /* border: 1px solid black; */
+  justify-content: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.table img {
+  width: 100%;
+  border-radius: 15px;
 }
