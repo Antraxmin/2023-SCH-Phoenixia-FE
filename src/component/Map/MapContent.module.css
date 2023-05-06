@@ -38,3 +38,9 @@
   background-color: darkgray;
   margin: 10px;
 }
+
+.main {
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #eeeeee;
+}
