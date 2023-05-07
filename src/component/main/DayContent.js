@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import style from "./DayContent.module.css";
+import React from "react";
 import HalfMoonDay from "./HalfMoonDay";
 import FullMoonDay from "./FullMoonDay";
 import NewMoonDay from "./NewMoonDay";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styled from "styled-components";
 
 export default function DayContent() {
   const settings = {
@@ -19,18 +19,32 @@ export default function DayContent() {
   };
 
   return (
-    <div className={style.carousel}>
+    <Carousel>
       <Slider {...settings}>
-        <div className={style.day_info_box}>
+        <DayInfoBox>
           <NewMoonDay />
-        </div>
-        <div className={style.day_info_box}>
+        </DayInfoBox>
+        <DayInfoBox>
           <HalfMoonDay />
-        </div>
-        <div className={style.day_info_box}>
+        </DayInfoBox>
+        <DayInfoBox>
           <FullMoonDay />
-        </div>
+        </DayInfoBox>
       </Slider>
-    </div>
+    </Carousel>
   );
 }
+
+const Carousel = styled.div`
+  width: 100%;
+  max-width: 390px;
+  height: 80vh;
+`;
+
+const DayInfoBox = styled.div`
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 267px;
+  border-radius: 10px;
+  margin: 0 0 auto;
+`;
