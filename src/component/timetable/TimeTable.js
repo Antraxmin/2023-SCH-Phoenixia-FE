@@ -1,8 +1,6 @@
 import React from "react";
-import style from "./TimeTable.module.css";
 import { useState } from "react";
 import SideDrawer from "../category/SideDrawer";
-import TimeTableNav from "./TimeTableNav";
 import firstdayimage from "../../img/timetable/day1.png";
 import seconddayimage from "../../img/timetable/day2.png";
 import thirddayimage from "../../img/timetable/day3.png";
@@ -11,7 +9,7 @@ import appbar from "../../img/common/app_bar_dark.png";
 
 export default function TimeTable() {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
-  const [image, setImage] = useState(FirstDayImg);
+  const [image, setImage] = useState(firstdayimage);
 
   return (
     <>
@@ -25,29 +23,71 @@ export default function TimeTable() {
           />
           <HeaderTitle>공연 시간표</HeaderTitle>
         </Header>
-        <main>
+        <MainContent>
           <DateContainer>
-            <TimeTableNav setImage={setImage} />
+            <ItemBox>
+              <FirstDay
+                onClick={() => {
+                  setImage(firstdayimage);
+                }}
+              />
+              <SecondDay
+                onClick={() => {
+                  setImage(seconddayimage);
+                }}
+              />
+              <ThirdDay
+                onClick={() => {
+                  setImage(thirddayimage);
+                }}
+              />
+            </ItemBox>
           </DateContainer>
           <TableContainer>
-            <FirstDayImg />
+            <img src={image} width={200} />
           </TableContainer>
-        </main>
+        </MainContent>
       </Container>
     </>
   );
 }
 
-const Container = style.div`
+const FirstDay = () => {
+  return (
+    <Today>
+      <Date>9일</Date>
+      <Day>화요일</Day>
+    </Today>
+  );
+};
+
+const SecondDay = () => {
+  return (
+    <Today>
+      <Date>10일</Date>
+      <Day>수요일</Day>
+    </Today>
+  );
+};
+
+const ThirdDay = () => {
+  return (
+    <Today>
+      <Date>11일</Date>
+      <Day>목요일</Day>
+    </Today>
+  );
+};
+
+const Container = styled.div`
   width: 100%;
   height: 100%;
   max-width: 390px;
   margin: 0 auto;
   background-color: white;
-  overflow-y: scroll;
 `;
 
-const Header = styled.div`
+const Header = styled.header`
   width: 100%;
   max-width: 390px;
   padding-left: 20px;
@@ -60,6 +100,7 @@ const AppbarImg = styled.img.attrs({
   src: `${appbar}`,
 })`
   width: 18px;
+  cursor: pointer;
 `;
 
 const HeaderTitle = styled.p`
@@ -69,10 +110,50 @@ const HeaderTitle = styled.p`
   padding-top: 5px;
 `;
 
+const MainContent = styled.main`
+  overflow-y: scroll;
+`;
+
 const DateContainer = styled.div`
   height: 90px;
   display: flex;
   justify-content: center;
+`;
+
+const ItemBox = styled.div`
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+`;
+
+const Today = styled.div`
+  border-bottom: 3px solid #888888;
+  margin: 7px;
+  padding: 10px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: "GongGothicMedium";
+  color: #888888;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: #000066;
+    cursor: pointer;
+    border-bottom: 3px solid #000066;
+  }
+`;
+
+const Date = styled.div`
+  font-size: 22px;
+  display: inline-block;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+`;
+
+const Day = styled.div`
+  font-size: 13px;
 `;
 
 const TableContainer = styled.div`
