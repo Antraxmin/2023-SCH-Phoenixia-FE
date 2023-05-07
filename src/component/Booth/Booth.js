@@ -1,5 +1,4 @@
 import React from "react";
-import style from "./Booth.module.css";
 import { useState } from "react";
 import SideDrawer from "../category/SideDrawer";
 import { BoothListBox } from "./BoothListBox";
@@ -44,30 +43,63 @@ export default function Booth() {
   return (
     <>
       {drawerIsOpen == true ? <SideDrawer /> : null}
-      <div className={style.container}>
-        <header className={style.header}>
+      <Container>
+        <Header>
           <AppbarImg
             onClick={() => {
               setDrawerIsOpen(!drawerIsOpen);
             }}
           />
-          <p>동아리/부스</p>
-        </header>
-        <main>
-          <div className={style.booth_list}>
+          <HeaderTitle>동아리/부스</HeaderTitle>
+        </Header>
+        <Main>
+          <BoothList>
             {booth_data.map((booth) => (
               <BoothListBox booth={booth} key={booth.id} />
             ))}
-          </div>
-        </main>
-      </div>
+          </BoothList>
+        </Main>
+      </Container>
     </>
   );
 }
+
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  background-color: white;
+`;
+
+const Header = styled.header`
+  width: 100%;
+  max-width: 390px;
+  padding-left: 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+`;
+
+const HeaderTitle = styled.div`
+  padding-left: 30px;
+  font-size: 20px;
+  font-family: "GongGothicMedium";
+  padding-top: 5px;
+`;
 
 const AppbarImg = styled.img.attrs({
   src: `${appbar}`,
 })`
   width: 18px;
   cursor: pointer;
+`;
+
+const Main = styled.main`
+  height: 100%;
+`;
+
+const BoothList = styled.div`
+  height: 100vh;
+  overflow-y: scroll;
 `;
