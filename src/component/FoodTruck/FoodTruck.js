@@ -1,5 +1,4 @@
 import React from "react";
-import style from "./FoodTruck.module.css";
 import { useState } from "react";
 import SideDrawer from "../category/SideDrawer";
 import FoodTruckListBox from "./FoodTruckListBox";

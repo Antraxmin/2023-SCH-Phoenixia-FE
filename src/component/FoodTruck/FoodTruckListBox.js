@@ -1,18 +1,53 @@
-import style from "./FoodTruckListBox.module.css";
+import styled from "styled-components";
 
 export default function FoodTruckListBox({ food }) {
   return (
     <>
-      <div className={style.container}>
-        <div className={style.content}>
-          <img src={food.image}></img>
-
-          <div className={style.info}>
-            <div className={style.title}>{food.name}</div>
-            <div className={style.discription}>{food.description}</div>
-          </div>
-        </div>
-      </div>
+      <Container>
+        <Content>
+          <FoodtruckImg src={food.image} />
+          <Info>
+            <Title>{food.name}</Title>
+            <Description>{food.description}</Description>
+          </Info>
+        </Content>
+      </Container>
     </>
   );
 }
+
+const Container = styled.div`
+  padding: 10px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  font-family: "Pretendard-Bold";
+`;
+
+const Content = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const FoodtruckImg = styled.img`
+  width: 90px;
+  margin-right: 10px;
+`;
+
+const Info = styled.div`
+  width: 100%;
+`;
+
+const Title = styled.div`
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-family: "Pretendard-Black";
+`;
+
+const Description = styled.div`
+  padding: 5px;
+  font-size: 11px;
+  color: #777777;
+`;
