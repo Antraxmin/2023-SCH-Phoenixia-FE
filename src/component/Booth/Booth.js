@@ -3,6 +3,8 @@ import style from "./Booth.module.css";
 import { useState } from "react";
 import SideDrawer from "../category/SideDrawer";
 import { BoothListBox } from "./BoothListBox";
+import appbar from "../../img/common/app_bar_dark.png";
+import styled from "styled-components";
 
 export default function Booth() {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
@@ -44,10 +46,7 @@ export default function Booth() {
       {drawerIsOpen == true ? <SideDrawer /> : null}
       <div className={style.container}>
         <header className={style.header}>
-          <img
-            src="./img/app_bar_dark.png"
-            alt=""
-            width={18}
+          <AppbarImg
             onClick={() => {
               setDrawerIsOpen(!drawerIsOpen);
             }}
@@ -65,3 +64,10 @@ export default function Booth() {
     </>
   );
 }
+
+const AppbarImg = styled.img.attrs({
+  src: `${appbar}`,
+})`
+  width: 18px;
+  cursor: pointer;
+`;

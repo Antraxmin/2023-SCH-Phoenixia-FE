@@ -12,6 +12,7 @@
   max-width: 390px;
   margin: 0 auto;
   background-color: white;
+  overflow-y: hidden;
 }
 
 .header {
@@ -41,6 +42,4 @@
 
 .main {
   height: 100%;
-  overflow-y: scroll;
-  background-color: #eeeeee;
 }

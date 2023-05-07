@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import map from "../../img/map/boothmap.png";
+import marker from "../../img/map/marker.png";
 
 export default function MapSection() {
   const boothList = [
@@ -124,7 +125,10 @@ export default function MapSection() {
   return (
     <Container>
       <BoothMap>
-        <BoothMapImage />
+        <BoothMapBox>
+          <BoothMapImage />
+          <Marker />
+        </BoothMapBox>
       </BoothMap>
       <BoothInfo>
         <BoothListBox>
@@ -141,7 +145,7 @@ export function BoothListItem({ booth }) {
   return (
     <ListContainer>
       <BoothNumber>{booth.id}</BoothNumber>
-      <div>{booth.name}</div>
+      <BoothName>{booth.name}</BoothName>
     </ListContainer>
   );
 }
@@ -154,6 +158,13 @@ const Container = styled.div`
 const BoothMap = styled.div`
   padding: 10px;
   background-color: white;
+  width: 75%;
+  height: 310px;
+  margin: 0 auto;
+`;
+
+const BoothMapBox = styled.div`
+  position: relative;
 `;
 
 const BoothInfo = styled.div`
@@ -165,35 +176,48 @@ const BoothMapImage = styled.img.attrs({
 })`
   width: 100%;
   border-radius: 10px;
+  position: absolute;
+`;
+
+const Marker = styled.img.attrs({
+  src: `${marker}`,
+})`
+  width: 24px;
+  position: absolute;
 `;
 
 const BoothListBox = styled.div`
   width: 100%;
   font-family: "GongGothicMedium";
-  font-size: 14px;
+  font-size: 12px;
   height: 100%;
+  overflow-y: scroll;
+  margin-top: 10px;
 `;
 
 const ListContainer = styled.div`
   //   border: 1px solid green;
   padding: 5px 0px 5px 0px;
-  height: 50px;
+  height: 25px;
   display: flex;
   align-items: center;
   background-color: white;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   box-shadow: 0.5px 0.5px gray;
 `;
 
 const BoothNumber = styled.div`
-  width: 30px;
+  width: 40px;
   text-align: center;
   padding-right: 5px;
   padding-left: 10px;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-left: 5px;
+  border-right: 2px solid lightgray;
+  color: #000066;
 `;
 
-const BoothSeperate = styled.div`
-  width: 10px;
+const BoothName = styled.div`
+  margin-left: 5px;
+  right: 100px;
 `;
