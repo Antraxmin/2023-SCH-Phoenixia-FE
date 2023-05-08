@@ -1,23 +1,59 @@
+import { useState } from "react";
 import styled from "styled-components";
+import upper from "../../img/common/upper_arrow.png";
 
 export function BoothListBox({ booth }) {
+  const [isclicked, setisClicked] = useState(false);
   return (
     <>
       <Container>
-        <Content>
-          <BoothImage src={booth.imageUrl}></BoothImage>
-          <Info>
-            <Title>{booth.name}</Title>
-            <Theme>{booth.category}</Theme>
-            <Description>{booth.description}</Description>
-          </Info>
-        </Content>
+        <BoothContent
+          onClick={() => {
+            console.log(booth.name);
+            setisClicked(true);
+          }}
+        >
+          <Content>
+            <BoothImage src={booth.imageUrl}></BoothImage>
+            <Info>
+              <Title>{booth.name}</Title>
+              <Theme>{booth.category}</Theme>
+            </Info>
+          </Content>
+        </BoothContent>
+        {isclicked ? (
+          <Modal>
+            <div>{booth.description}</div>
+            <ImageArea
+              onClick={() => {
+                setisClicked(false);
+              }}
+            >
+              <UpperImg src={upper} />
+            </ImageArea>
+          </Modal>
+        ) : null}
       </Container>
     </>
   );
 }
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-family: "Pretendard-Bold";
+`;
+
+const Modal = styled.div`
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  justify-content: space-between;
+`;
+
+const BoothContent = styled.div`
   padding: 10px;
   height: 130px;
   display: flex;
@@ -71,4 +107,20 @@ const Description = styled.div`
   font-size: 15px;
   margin-bottom: 15px;
   font-family: "Pretendard-SemiBold";
+`;
+
+const UpperImg = styled.img`
+  width: 18px;
+  &:hover {
+    cursor: pointer;
+    //background-color: white;
+    color: white;
+  }
+`;
+
+const ImageArea = styled.div`
+  border-radius: 10px;
+  &:hover {
+    background-color: lightgray;
+  }
 `;
