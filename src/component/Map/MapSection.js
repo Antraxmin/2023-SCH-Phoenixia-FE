@@ -127,7 +127,6 @@ export default function MapSection() {
       <BoothMap>
         <BoothMapBox>
           <BoothMapImage />
-          <Marker />
         </BoothMapBox>
       </BoothMap>
       <BoothInfo>
