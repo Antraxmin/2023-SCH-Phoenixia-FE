@@ -18,7 +18,9 @@ export default function FoodTruck() {
       setFoods(null);
       setLoading(true);
       setError(null);
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/foodtruck`);
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/api/foodtruck`
+      );
       setFoods(res.data);
     } catch (e) {
       setError(e);

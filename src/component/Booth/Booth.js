@@ -18,7 +18,7 @@ export default function Booth() {
       setBooths(null);
       setLoading(true);
       setError(null);
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/club`);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/club`);
       setBooths(res.data);
     } catch (e) {
       setError(e);
