@@ -32,12 +32,31 @@ export default function FoodTruckDetail() {
             <img src={image} width={100} />
           </ImageArea>
           <TitleArea>{name}</TitleArea>
-          <MenuArea>메뉴 영역입니다 </MenuArea>
+          <MenuArea>
+            <MenuList />
+            <MenuList />
+            <MenuList />
+          </MenuArea>
         </main>
       </Container>
     </>
   );
 }
+
+export function MenuList() {
+  return (
+    <>
+      <MenuListBox>dkdkdk</MenuListBox>
+    </>
+  );
+}
+
+const MenuListBox = styled.div`
+  width: 100%;
+  height: 100px;
+  background-color: yellow;
+  margin-bottom: 10px;
+`;
 
 const Container = styled.div`
   width: 100%;
