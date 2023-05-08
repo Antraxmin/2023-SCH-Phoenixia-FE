@@ -3,7 +3,11 @@ import styled from "styled-components";
 export default function FoodTruckListBox({ food }) {
   return (
     <>
-      <Container>
+      <Container
+        onClick={() => {
+          console.log(food.name);
+        }}
+      >
         <Content>
           <FoodtruckImg src={food.imageUrl} />
           <Info>
@@ -23,6 +27,11 @@ const Container = styled.div`
   align-items: center;
   border: 1px solid lightgray;
   font-family: "Pretendard-Bold";
+
+  &:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+  }
 `;
 
 const Content = styled.div`
