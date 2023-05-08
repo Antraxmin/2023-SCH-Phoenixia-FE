@@ -73,7 +73,8 @@ const MenuImg = styled.img`
 const Price = styled.div`
   width: 100%;
   font-size: 11px;
-  font-family: "Pretendard-Regular";
+  font-family: "S-CoreDream-3Light";
+  //font-weight: bold;
   padding-bottom: 8px;
   color: #999999;
 `;
@@ -82,7 +83,7 @@ const Title = styled.div`
   width: 100%;
   font-size: 15px;
   padding-top: 8px;
-  font-family: "Pretendard-Bold";
+  font-family: "S-CoreDream-3Light";
   font-weight: bold;
 `;
 
@@ -150,7 +151,8 @@ const TitleArea = styled.div`
   height: 50px;
   border-bottom: 1px solid lightgray;
   padding: 10px;
-  font-family: "Pretendard-Bold";
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
   font-size: 18px;
   display: flex;
   justify-content: center;

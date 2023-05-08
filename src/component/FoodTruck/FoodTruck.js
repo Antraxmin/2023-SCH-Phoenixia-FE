@@ -78,7 +78,8 @@ const Header = styled.header`
 const HeaderTitle = styled.div`
   padding-left: 30px;
   font-size: 20px;
-  font-family: "Pretendard-Bold";
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
   padding-top: 5px;
 `;
 

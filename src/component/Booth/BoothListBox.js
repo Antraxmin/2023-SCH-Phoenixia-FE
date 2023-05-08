@@ -50,7 +50,8 @@ const Modal = styled.div`
   align-items: center;
   border: 1px solid lightgray;
   justify-content: space-between;
-  font-family: "Pretendard-SemiBold";
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
 `;
 
 const BoothContent = styled.div`
@@ -83,7 +84,8 @@ const Title = styled.div`
   padding: 5px;
   font-size: 18px;
   margin-bottom: 15px;
-  font-family: "Pretendard-Bold";
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
 `;
 
 const Theme = styled.div`
@@ -95,19 +97,12 @@ const Theme = styled.div`
   border-radius: 5px;
   margin-left: 5px;
   padding: 5px 10px 5px 10px;
-  font-family: "Pretendard-SemiBold";
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
 
   // &:hover {
   //   color: #000066;
   // }
-`;
-
-const Description = styled.div`
-  padding: 5px;
-  font-size: 15px;
-  margin-bottom: 15px;
-  font-family: "NanumSquareNeo-Variable";
-  font-weight: bold;
 `;
 
 const UpperImg = styled.img`

@@ -101,7 +101,8 @@ const AppbarImg = styled.img.attrs({
 const HeaderTitle = styled.p`
   padding-left: 30px;
   font-size: 20px;
-  font-family: "Pretendard-Bold";
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
   padding-top: 5px;
 `;
 
