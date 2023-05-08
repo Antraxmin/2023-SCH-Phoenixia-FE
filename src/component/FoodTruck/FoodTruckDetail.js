@@ -85,10 +85,6 @@ const Title = styled.div`
   font-weight: bold;
 `;
 
-const Description = styled.div`
-  border: 1px solid black;
-`;
-
 const MenuImageArea = styled.div`
   width: 100px;
   height: 80px;

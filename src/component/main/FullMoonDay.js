@@ -46,7 +46,7 @@ const Text = styled.div`
 const Artist = styled.img`
   margin-top: 15px;
   border-radius: 10px;
-  font-family: "S-CoreDream-3Light";
+  font-family: "NanumSquareNeo-Variable";
   display: flex;
   justify-content: center;
   align-items: center;

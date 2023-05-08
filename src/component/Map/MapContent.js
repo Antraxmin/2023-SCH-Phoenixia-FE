@@ -48,7 +48,7 @@ const Header = styled.header`
 const HeaderTitle = styled.header`
   padding-left: 30px;
   font-size: 20px;
-  font-family: "GongGothicMedium";
+  font-family: "NanumSquareNeo-Variable";
   padding-top: 5px;
 `;
 

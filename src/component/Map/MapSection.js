@@ -187,7 +187,8 @@ const Marker = styled.img.attrs({
 
 const BoothListBox = styled.div`
   width: 100%;
-  font-family: "GongGothicMedium";
+  font-family: "NanumSquareNeo-Variable";
+  font-weight: bold;
   font-size: 12px;
   height: 100%;
   overflow-y: scroll;

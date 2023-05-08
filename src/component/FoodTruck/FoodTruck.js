@@ -80,7 +80,6 @@ const HeaderTitle = styled.div`
   font-size: 20px;
   font-family: "NanumSquareNeo-Variable";
   padding-top: 5px;
-  font-weight: bold;
 `;
 
 const AppbarImg = styled.img.attrs({
