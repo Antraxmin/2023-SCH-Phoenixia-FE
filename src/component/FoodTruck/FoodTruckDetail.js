@@ -9,6 +9,7 @@ export default function FoodTruckDetail() {
   const { id } = useParams();
   const [image, setImage] = useState(null);
   const [name, setName] = useState(null);
+  const [menu, setMenu] = useState([]);
 
   useEffect(() => {
     axios
@@ -16,6 +17,9 @@ export default function FoodTruckDetail() {
       .then((res) => {
         setImage(res.data.imageUrl);
         setName(res.data.name);
+        console.log(res.data.menus);
+        setMenu(res.data.menus);
+        console.log(menu);
       });
   }, [id]);
 
@@ -27,35 +31,91 @@ export default function FoodTruckDetail() {
             <BackBtn />
           </Link>
         </Header>
-        <main>
+        <Main>
           <ImageArea>
-            <img src={image} width={100} />
+            <img src={image} width="100%" />
           </ImageArea>
           <TitleArea>{name}</TitleArea>
           <MenuArea>
-            <MenuList />
-            <MenuList />
-            <MenuList />
+            {menu ? menu.map((e) => <MenuList menu={e} />) : null}
           </MenuArea>
-        </main>
+        </Main>
       </Container>
     </>
   );
 }
 
-export function MenuList() {
+export function MenuList({ menu }) {
   return (
     <>
-      <MenuListBox>dkdkdk</MenuListBox>
+      <MenuListBox>
+        <MenuItem>
+          <Title>{menu.name}</Title>
+          <Price>{menu.price}</Price>
+        </MenuItem>
+        <MenuImageArea>
+          <MenuImg src={menu.imageUrl} />
+        </MenuImageArea>
+      </MenuListBox>
     </>
   );
 }
 
-const MenuListBox = styled.div`
+const Main = styled.main`
+  background-color: #eeeeee;
+`;
+const MenuImg = styled.img`
   width: 100%;
-  height: 100px;
-  background-color: yellow;
-  margin-bottom: 10px;
+  height: 80%;
+  border-radius: 7px;
+`;
+
+const Price = styled.div`
+  width: 100%;
+  font-size: 11px;
+  font-family: "NanumSquareNeo-Variable";
+  padding-bottom: 8px;
+`;
+
+const Title = styled.div`
+  width: 100%;
+  font-size: 15px;
+  padding-top: 8px;
+  font-family: "NanumSquareNeo-Variable";
+  font-weight: bold;
+`;
+
+const Description = styled.div`
+  border: 1px solid black;
+`;
+
+const MenuImageArea = styled.div`
+  width: 100px;
+  height: 80px;
+  //border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const MenuItem = styled.div`
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  //border: 1px solid black;
+`;
+
+const MenuListBox = styled.div`
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #eeeeee;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 `;
 
 const Container = styled.div`
@@ -85,24 +145,28 @@ const BackBtn = styled.img.attrs({
 const ImageArea = styled.div`
   width: 100%;
   height: 200px;
-  border: 1px solid black;
+  display: flex;
 `;
 
 const TitleArea = styled.div`
   width: 100%;
-  height: 60px;
-  border: 1px solid black;
+  height: 50px;
+  border-bottom: 1px solid lightgray;
   padding: 10px;
-  font-family: "GongGothicMedium";
-  font-size: 20px;
-  margin-top: 8px;
+  font-family: "NanumSquareNeo-Variable";
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: white;
 `;
 
 const MenuArea = styled.div`
   width: 100%;
   height: 100%;
-  border: 1px solid black;
-  padding: 10px;
-  margin-top: 8px;
+  //border: 1px solid black;
+  margin-top: 5px;
   font-family: "Pretendard-Bold";
+  background-color: white;
 `;
