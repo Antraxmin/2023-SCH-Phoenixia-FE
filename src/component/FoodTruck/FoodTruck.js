@@ -4,52 +4,34 @@ import SideDrawer from "../category/SideDrawer";
 import FoodTruckListBox from "./FoodTruckListBox";
 import appbar from "../../img/common/app_bar_dark.png";
 import styled from "styled-components";
+import axios from "axios";
+import { useEffect } from "react";
 
 export default function FoodTruck() {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+  const [foods, setFoods] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const food_data = [
-    {
-      name: "꼬꼬닭꼬치",
-      description:
-        "안녕하세요. 꼬꼬닭꼬치입니다. 저희는 데리야끼 닭꼬치가 주력메뉴입니다.",
-      image: "./img/koko.JPG",
-    },
-    {
-      name: "인생타코",
-      description: "멕시코가 그대로! 인생타코입니다",
-      image: "./img/taco.JPG",
-    },
-    {
-      name: "청년스테이크",
-      description:
-        "청년스테이크입니다. 저희는 청정호주산 소고기만 사용하여 아주 맛있습니다",
-      image: "./img/stake.JPG",
-    },
-    {
-      name: "하와이 드링크",
-      description: "축제에는 시원한 음료가 빠지면 섭섭하죠!",
-      image: "./img/hawaii.JPG",
-    },
-    {
-      name: "맨해튼버거",
-      description:
-        "뉴욕 맨해튼에서 먹던 맛 그대로. 정통 미국식 수제버거 푸드트럭입니다",
-      image: "./img/burger.JPG",
-    },
-    {
-      name: "버거",
-      description:
-        "뉴욕 맨해튼에서 먹던 맛 그대로. 정통 미국식 수제버거 푸드트럭입니다",
-      image: "./img/koko.JPG",
-    },
-    {
-      name: "감자",
-      description:
-        "뉴욕 맨해튼에서 먹던 맛 그대로. 정통 미국식 수제버거 푸드트럭입니다",
-      image: "./img/hawaii.JPG",
-    },
-  ];
+  const getFoodData = async () => {
+    try {
+      setFoods(null);
+      setLoading(true);
+      setError(null);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/foodtruck`);
+      setFoods(res.data);
+    } catch (e) {
+      setError(e);
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    getFoodData();
+  }, []);
+
+  if (!foods) return console.log("로딩중입니다");
+
   return (
     <>
       {drawerIsOpen == true ? <SideDrawer /> : null}
@@ -64,7 +46,7 @@ export default function FoodTruck() {
         </Header>
         <Main>
           <FoodtruckList>
-            {food_data.map((food) => (
+            {foods.map((food) => (
               <FoodTruckListBox food={food} key={food.id} />
             ))}
           </FoodtruckList>

@@ -5,7 +5,7 @@ export default function FoodTruckListBox({ food }) {
     <>
       <Container>
         <Content>
-          <FoodtruckImg src={food.image} />
+          <FoodtruckImg src={food.imageUrl} />
           <Info>
             <Title>{food.name}</Title>
             <Description>{food.description}</Description>
