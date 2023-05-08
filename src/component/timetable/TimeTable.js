@@ -11,6 +11,18 @@ export default function TimeTable() {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
   const [image, setImage] = useState(firstdayimage);
 
+  const setFirstDayImage = () => {
+    setImage(firstdayimage);
+  };
+
+  const setSecondDayImage = () => {
+    setImage(seconddayimage);
+  };
+
+  const setThirdDayImage = () => {
+    setImage(thirddayimage);
+  };
+
   return (
     <>
       {drawerIsOpen == true ? <SideDrawer /> : null}
@@ -26,58 +38,41 @@ export default function TimeTable() {
         <MainContent>
           <DateContainer>
             <ItemBox>
-              <FirstDay
+              <Today
                 onClick={() => {
-                  setImage(firstdayimage);
+                  setImage(setFirstDayImage);
                 }}
-              />
-              <SecondDay
+              >
+                <Date>9일</Date>
+                <Day>화요일</Day>
+              </Today>
+
+              <Today
                 onClick={() => {
-                  setImage(seconddayimage);
+                  setImage(setSecondDayImage);
                 }}
-              />
-              <ThirdDay
+              >
+                <Date>10일</Date>
+                <Day>수요일</Day>
+              </Today>
+              <Today
                 onClick={() => {
-                  setImage(thirddayimage);
+                  setImage(setThirdDayImage);
                 }}
-              />
+              >
+                <Date>11일</Date>
+                <Day>목요일</Day>
+              </Today>
             </ItemBox>
           </DateContainer>
           <TableContainer>
-            <img src={image} width={200} />
+            <TableImg src={image} />
           </TableContainer>
         </MainContent>
       </Container>
     </>
   );
 }
-
-const FirstDay = () => {
-  return (
-    <Today>
-      <Date>9일</Date>
-      <Day>화요일</Day>
-    </Today>
-  );
-};
-
-const SecondDay = () => {
-  return (
-    <Today>
-      <Date>10일</Date>
-      <Day>수요일</Day>
-    </Today>
-  );
-};
-
-const ThirdDay = () => {
-  return (
-    <Today>
-      <Date>11일</Date>
-      <Day>목요일</Day>
-    </Today>
-  );
-};
 
 const Container = styled.div`
   width: 100%;
@@ -111,10 +106,11 @@ const HeaderTitle = styled.p`
 `;
 
 const MainContent = styled.main`
-  overflow-y: scroll;
+  //overflow-y: scroll;
 `;
 
 const DateContainer = styled.div`
+  width: 100%;
   height: 90px;
   display: flex;
   justify-content: center;
@@ -163,23 +159,7 @@ const TableContainer = styled.div`
   padding: 0px 20px 0px 20px;
 `;
 
-const FirstDayImg = styled.img.attrs({
-  src: `${firstdayimage}`,
-})`
+const TableImg = styled.img`
+  border-radius: 10px;
   width: 100%;
-  border-radius: 15px;
-`;
-
-const SecondDayImg = styled.img.attrs({
-  src: `${seconddayimage}`,
-})`
-  width: 100%;
-  border-radius: 15px;
-`;
-
-const ThirdDayImg = styled.img.attrs({
-  src: `${thirddayimage}`,
-})`
-  width: 100%;
-  border-radius: 15px;
 `;
