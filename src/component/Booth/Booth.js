@@ -32,38 +32,6 @@ export default function Booth() {
 
   if (!booths) return console.log("로딩중입니다");
 
-  const booth_data = [
-    {
-      name: "Festival People",
-      theme: "#부스",
-      image: "./img/booth/fepe.JPG",
-    },
-    {
-      name: "유니브팅",
-      theme: "#부스",
-      image: "./img/booth/univting.JPG",
-    },
-    {
-      name: "REAL",
-      theme: "#공연",
-      image: "./img/booth/real.JPG",
-    },
-    {
-      name: "키릿",
-      theme: "#부스",
-      image: "./img/booth/kilit.JPG",
-    },
-    {
-      name: "CLOSER",
-      theme: "#공연",
-      image: "./img/booth/closer.JPG",
-    },
-    {
-      name: "UNTITLE",
-      theme: "#공연",
-      image: "./img/booth/untitle.JPG",
-    },
-  ];
   return (
     <>
       {drawerIsOpen == true ? <SideDrawer /> : null}
