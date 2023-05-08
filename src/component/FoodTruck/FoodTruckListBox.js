@@ -26,7 +26,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   border: 1px solid lightgray;
-  font-family: "Pretendard-Bold";
+  font-family: "NanumSquareNeo-Variable";
+  //font-weight: bold;
 
   &:hover {
     cursor: pointer;
@@ -52,7 +53,8 @@ const Title = styled.div`
   padding: 5px;
   font-size: 16px;
   margin-bottom: 5px;
-  font-family: "Pretendard-Black";
+  font-family: "NanumSquareNeo-Variable";
+  font-weight: bold;
 `;
 
 const Description = styled.div`

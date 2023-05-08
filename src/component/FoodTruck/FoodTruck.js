@@ -78,8 +78,9 @@ const Header = styled.header`
 const HeaderTitle = styled.div`
   padding-left: 30px;
   font-size: 20px;
-  font-family: "GongGothicMedium";
+  font-family: "NanumSquareNeo-Variable";
   padding-top: 5px;
+  font-weight: bold;
 `;
 
 const AppbarImg = styled.img.attrs({
