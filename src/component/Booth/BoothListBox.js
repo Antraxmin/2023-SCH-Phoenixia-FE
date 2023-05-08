@@ -50,12 +50,12 @@ const Modal = styled.div`
   align-items: center;
   border: 1px solid lightgray;
   justify-content: space-between;
-  font-family: "NanumSquareNeo-Variable";
+  font-family: "Pretendard-SemiBold";
 `;
 
 const BoothContent = styled.div`
   padding: 10px;
-  height: 130px;
+  height: 100px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid lightgray;
@@ -81,10 +81,9 @@ const Info = styled.div`
 
 const Title = styled.div`
   padding: 5px;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 15px;
-  font-family: "NanumSquareNeo-Variable";
-  font-weight: bold;
+  font-family: "Pretendard-Bold";
 `;
 
 const Theme = styled.div`
@@ -96,7 +95,7 @@ const Theme = styled.div`
   border-radius: 5px;
   margin-left: 5px;
   padding: 5px 10px 5px 10px;
-  font-family: "NanumSquareNeo-Variable";
+  font-family: "Pretendard-SemiBold";
 
   // &:hover {
   //   color: #000066;
