@@ -6,6 +6,7 @@ import TimeTable from "./component/timetable/TimeTable";
 import MainContent from "./component/main/MainContent";
 import "./global.css";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import FoodTruckDetail from "./component/FoodTruck/FoodTruckDetail";
 
 function App() {
   return (
@@ -15,6 +16,11 @@ function App() {
           <Route exact path="/" element={<MainContent />} />
           <Route exact path="/map" element={<MapContent />} />
           <Route exact path="/foodtruck" element={<FoodTruck />} />
+          <Route
+            exact
+            path="/foodtruck/:id"
+            element={<FoodTruckDetail />}
+          ></Route>
           <Route exact path="/booth" element={<Booth />} />
           <Route exact path="/timetable" element={<TimeTable />} />
           <Route exact path="/about" element={<About />} />

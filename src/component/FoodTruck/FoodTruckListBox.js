@@ -1,21 +1,21 @@
+import { Link, useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
+import FoodTruckDetail from "./FoodTruckDetail";
 
 export default function FoodTruckListBox({ food }) {
   return (
     <>
-      <Container
-        onClick={() => {
-          console.log(food.name);
-        }}
-      >
-        <Content>
-          <FoodtruckImg src={food.imageUrl} />
-          <Info>
-            <Title>{food.name}</Title>
-            <Description>{food.description}</Description>
-          </Info>
-        </Content>
-      </Container>
+      <Link to={`/foodtruck/${food.truck_id}`}>
+        <Container>
+          <Content>
+            <FoodtruckImg src={food.imageUrl} />
+            <Info>
+              <Title>{food.name}</Title>
+              <Description>{food.description}</Description>
+            </Info>
+          </Content>
+        </Container>
+      </Link>
     </>
   );
 }
