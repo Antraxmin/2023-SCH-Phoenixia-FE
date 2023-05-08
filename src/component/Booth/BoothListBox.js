@@ -5,10 +5,11 @@ export function BoothListBox({ booth }) {
     <>
       <Container>
         <Content>
-          <BoothImage src={booth.image}></BoothImage>
+          <BoothImage src={booth.imageUrl}></BoothImage>
           <Info>
             <Title>{booth.name}</Title>
-            <Theme>{booth.theme}</Theme>
+            <Theme>{booth.category}</Theme>
+            <Description>{booth.description}</Description>
           </Info>
         </Content>
       </Container>
@@ -23,6 +24,10 @@ const Container = styled.div`
   align-items: center;
   border: 1px solid lightgray;
   font-family: "Pretendard-Bold";
+  &:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+  }
 `;
 
 const Content = styled.div`
@@ -55,4 +60,15 @@ const Theme = styled.div`
   border-radius: 5px;
   margin-left: 5px;
   padding: 5px 10px 5px 10px;
+
+  // &:hover {
+  //   color: #000066;
+  // }
+`;
+
+const Description = styled.div`
+  padding: 5px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-family: "Pretendard-SemiBold";
 `;

@@ -1,12 +1,36 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SideDrawer from "../category/SideDrawer";
 import { BoothListBox } from "./BoothListBox";
 import appbar from "../../img/common/app_bar_dark.png";
 import styled from "styled-components";
+import axios from "axios";
 
 export default function Booth() {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+
+  const [booths, setBooths] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const getBoothData = async () => {
+    try {
+      setBooths(null);
+      setLoading(true);
+      setError(null);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/club`);
+      setBooths(res.data);
+    } catch (e) {
+      setError(e);
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    getBoothData();
+  }, []);
+
+  if (!booths) return console.log("로딩중입니다");
 
   const booth_data = [
     {
@@ -54,7 +78,7 @@ export default function Booth() {
         </Header>
         <Main>
           <BoothList>
-            {booth_data.map((booth) => (
+            {booths.map((booth) => (
               <BoothListBox booth={booth} key={booth.id} />
             ))}
           </BoothList>
