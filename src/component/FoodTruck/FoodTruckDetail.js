@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import backBtn from "../../img/common/back_btn.png";
 import styled from "styled-components";
 import { useEffect } from "react";
@@ -7,14 +7,15 @@ import { useState } from "react";
 
 export default function FoodTruckDetail() {
   const { id } = useParams();
-  const [food, setFood] = useState({});
+  const [image, setImage] = useState(null);
+  const [name, setName] = useState(null);
 
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/api/foodtruck/${id}`)
       .then((res) => {
-        setFood(res.data.foodtruck);
-        console.log(res);
+        setImage(res.data.imageUrl);
+        setName(res.data.name);
       });
   }, [id]);
 
@@ -22,9 +23,17 @@ export default function FoodTruckDetail() {
     <>
       <Container>
         <Header>
-          <BackBtn />
+          <Link to="/foodtruck">
+            <BackBtn />
+          </Link>
         </Header>
-        <main>{id}번째 부스입니다</main>
+        <main>
+          <ImageArea>
+            <img src={image} width={100} />
+          </ImageArea>
+          <TitleArea>{name}</TitleArea>
+          <MenuArea>메뉴 영역입니다 </MenuArea>
+        </main>
       </Container>
     </>
   );
@@ -32,7 +41,7 @@ export default function FoodTruckDetail() {
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   max-width: 390px;
   margin: 0 auto;
   background-color: white;
@@ -42,7 +51,7 @@ const Header = styled.header`
   width: 100%;
   max-width: 390px;
   padding-left: 20px;
-  height: 70px;
+  height: 50px;
   display: flex;
   align-items: center;
 `;
@@ -52,4 +61,29 @@ const BackBtn = styled.img.attrs({
 })`
   width: 10px;
   cursor: pointer;
+`;
+
+const ImageArea = styled.div`
+  width: 100%;
+  height: 200px;
+  border: 1px solid black;
+`;
+
+const TitleArea = styled.div`
+  width: 100%;
+  height: 60px;
+  border: 1px solid black;
+  padding: 10px;
+  font-family: "GongGothicMedium";
+  font-size: 20px;
+  margin-top: 8px;
+`;
+
+const MenuArea = styled.div`
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 8px;
+  font-family: "Pretendard-Bold";
 `;
