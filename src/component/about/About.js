@@ -1,5 +1,4 @@
 import React from "react";
-import style from "./About.module.css";
 import { useState } from "react";
 import SideDrawer from "../category/SideDrawer";
 import appbar from "../../img/common/app_bar_dark.png";
@@ -11,22 +10,46 @@ export default function About() {
   return (
     <>
       {drawerIsOpen == true ? <SideDrawer /> : null}
-      <div className={style.container}>
-        <header className={style.header}>
+      <Container>
+        <Header>
           <AppbarImg
             onClick={() => {
               setDrawerIsOpen(!drawerIsOpen);
             }}
           />
-          <p>About us</p>
-        </header>
+          <HeaderTitle>About us</HeaderTitle>
+        </Header>
         <main>
           <AboutImg />
         </main>
-      </div>
+      </Container>
     </>
   );
 }
+
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  max-width: 390px;
+  margin: 0 auto;
+  background-color: white;
+`;
+
+const Header = styled.div`
+  width: 100%;
+  max-width: 390px;
+  padding-left: 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+`;
+
+const HeaderTitle = styled.div`
+  padding-left: 30px;
+  font-size: 20px;
+  font-family: "GongGothicMedium";
+  padding-top: 5px;
+`;
 
 const AppbarImg = styled.img.attrs({
   src: `${appbar}`,
@@ -39,5 +62,4 @@ const AboutImg = styled.img.attrs({
   src: `${aboutImage}`,
 })`
   width: 100%;
-  cursor: pointer;
 `;
