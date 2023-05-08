@@ -192,6 +192,7 @@ const BoothListBox = styled.div`
   height: 100%;
   overflow-y: scroll;
   margin-top: 10px;
+  padding-bottom: 400px;
 `;
 
 const ListContainer = styled.div`
