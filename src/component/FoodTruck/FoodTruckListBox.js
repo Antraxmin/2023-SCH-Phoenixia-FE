@@ -1,6 +1,5 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import FoodTruckDetail from "./FoodTruckDetail";
 
 export default function FoodTruckListBox({ food }) {
   return (
