@@ -10,7 +10,7 @@ export function BoothListBox({ booth }) {
         <BoothContent
           onClick={() => {
             console.log(booth.name);
-            setisClicked(true);
+            setisClicked(!isclicked);
           }}
         >
           <Content>
