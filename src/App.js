@@ -8,12 +8,14 @@ import "./global.css";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import FoodTruckDetail from "./component/FoodTruck/FoodTruckDetail";
 import ReactGA from "react-ga";
-
-const gaTrackingId = process.env.REACT_APP_GA_TRACKING_ID;
-ReactGA.initialize(gaTrackingId, { debug: true });
-ReactGA.pageview(window.location.pathname);
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const gaTrackingId = process.env.REACT_APP_GA_TRACKING_ID;
+    ReactGA.initialize(gaTrackingId, { debug: true });
+    ReactGA.pageview(window.location.pathname);
+  });
   return (
     <>
       <BrowserRouter>
