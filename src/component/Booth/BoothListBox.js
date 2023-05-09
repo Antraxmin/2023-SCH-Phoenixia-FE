@@ -58,7 +58,7 @@ const Modal = styled.div`
 
 const BoothContent = styled.div`
   padding: 10px;
-  height: 100px;
+  height: 110px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid lightgray;
@@ -74,8 +74,10 @@ const Content = styled.div`
 `;
 
 const BoothImage = styled.img`
-  width: 90px;
+  width: 80px;
   margin-right: 20px;
+  margin-left: 10px;
+  border-radius: 10px;
 `;
 
 const Info = styled.div`
@@ -84,7 +86,7 @@ const Info = styled.div`
 
 const Title = styled.div`
   padding: 5px;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 15px;
   font-family: "S-CoreDream-3Light";
   font-weight: bold;
