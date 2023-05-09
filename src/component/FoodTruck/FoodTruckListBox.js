@@ -21,11 +21,11 @@ export default function FoodTruckListBox({ food }) {
 }
 
 const Container = styled.div`
-  padding: 10px;
+  padding: 20px;
   height: 110px;
   display: flex;
   align-items: center;
-  border: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
   font-family: "S-CoreDream-3Light";
   font-weight: bold;
   //font-weight: bold;
@@ -44,10 +44,12 @@ const Content = styled.div`
 const FoodtruckImg = styled.img`
   width: 90px;
   margin-right: 10px;
+  border-radius: 7px;
 `;
 
 const Info = styled.div`
   width: 100%;
+  padding-left: 10px;
 `;
 
 const Title = styled.div`
