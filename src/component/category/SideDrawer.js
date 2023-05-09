@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import style from "./SideDrawer.module.css";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import linkimage from "../../img/common/link.png";
 
 export default function SideDrawer() {
   const [sideIsOpen, setSideIsOpen] = useState(true);
@@ -34,6 +36,14 @@ export default function SideDrawer() {
               <li>
                 <Link to="/map">축제 지도</Link>
               </li>
+              <li>
+                <a href="https://fepe.waveon.io/" target="_blank">
+                  <MBTIPage>
+                    {" "}
+                    나의 축제 MBTI 유형은? <img src={linkimage} width={18} />
+                  </MBTIPage>
+                </a>
+              </li>
               <li id={style.about}>
                 <Link to="/about">About us</Link>
               </li>
@@ -44,3 +54,14 @@ export default function SideDrawer() {
     </>
   );
 }
+
+const MBTIPage = styled.div`
+  animation-name: random;
+  animation-duration: 300ms;
+  animation-iteration-count: infinite;
+  padding: 10px;
+  width: 100%;
+  font-size: 13px;
+  
+  }
+`;
