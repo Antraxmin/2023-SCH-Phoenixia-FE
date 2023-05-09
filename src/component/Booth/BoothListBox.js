@@ -44,14 +44,16 @@ const Container = styled.div`
 `;
 
 const Modal = styled.div`
-  padding: 10px;
-  height: 60px;
+  padding: 15px;
+  padding: 15px 15px 15px 20px;
   display: flex;
   align-items: center;
   border: 1px solid lightgray;
   justify-content: space-between;
   font-family: "S-CoreDream-3Light";
   font-weight: bold;
+  line-height: 22px;
+  font-size: 12px;
 `;
 
 const BoothContent = styled.div`
@@ -112,6 +114,7 @@ const UpperImg = styled.img`
     //background-color: white;
     color: white;
   }
+  margin-left: 25px;
 `;
 
 const ImageArea = styled.div`
