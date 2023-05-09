@@ -119,7 +119,4 @@ const UpperImg = styled.img`
 
 const ImageArea = styled.div`
   border-radius: 10px;
-  &:hover {
-    background-color: lightgray;
-  }
 `;
