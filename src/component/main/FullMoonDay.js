@@ -9,7 +9,7 @@ export default function FullMoonDay() {
       <DayInfoBox>
         <Moon>
           <div>
-            <img src={fullmoon} width={35} />
+            <img src={fullmoon} width={40} />
           </div>
         </Moon>
         <Text>Full Moon Day</Text>

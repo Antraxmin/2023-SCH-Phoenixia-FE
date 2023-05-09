@@ -9,7 +9,7 @@ export default function NewMoonDay() {
       <DayInfoBox>
         <Moon>
           <div>
-            <img src={newmoon} width={35} />
+            <img src={newmoon} width={40} />
           </div>
         </Moon>
         <Text>New Moon Day</Text>
