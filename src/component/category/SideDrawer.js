@@ -25,6 +25,9 @@ export default function SideDrawer() {
                 <Link to="/">HOME</Link>
               </li>
               <li>
+                <Link to="/notice">공지사항</Link>
+              </li>
+              <li>
                 <Link to="/timetable">공연 시간표</Link>
               </li>
               <li>

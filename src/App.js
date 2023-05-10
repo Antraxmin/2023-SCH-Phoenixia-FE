@@ -9,6 +9,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import FoodTruckDetail from "./component/FoodTruck/FoodTruckDetail";
 import ReactGA from "react-ga";
 import { useEffect } from "react";
+import Notice from "./component/notice/Notice";
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<MainContent />} />
+          <Route exact path="/notice" element={<Notice />} />
           <Route exact path="/map" element={<MapContent />} />
           <Route exact path="/foodtruck" element={<FoodTruck />} />
           <Route

@@ -1,0 +1,72 @@
+.TitleArea {
+  //background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.OptionArea {
+  //background-color: #eeeeee;
+  height: 50px;
+}
+
+.TitleText {
+  //border: 1px solid black;
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.SubArea {
+  //background-color: gray;
+  height: 40px;
+}
+
+.SubText {
+  //border: 1px solid black;
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.OptionArea {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.OptionBox {
+  float: left;
+  //border-bottom: 1px solid black;
+  //border-top: 1px solid black;
+  display: flex;
+}
+
+.Item {
+  margin: 10px 5px 10px 5px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+  background-color: #eeeeee;
+  border: none;
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: #777777;
+}
+
+.Item:hover {
+  background-color: darkgray;
+  color: white;
+}
+
+.NoticeArea {
+  //background-color: yellow;
+  //border: 1px solid green;
+  display: flex;
+  margin-top: 20px;
+}
