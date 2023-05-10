@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import data from "../../data/data.json";
 import notice1 from "../../img/notice/1.PNG";
 import notice2 from "../../img/notice/2.PNG";
-import notice3 from "../../img/notice/3.PNG";
 import downarrow from "../../img/notice/down_arrow.png";
 import { useState } from "react";
 
