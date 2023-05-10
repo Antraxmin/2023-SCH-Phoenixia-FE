@@ -2,6 +2,7 @@ import React from "react";
 import DayContent from "./DayContent";
 import Header from "../layout/header/Header";
 import styled from "styled-components";
+import Banner from "./Banner";
 
 export default function MainContent() {
   return (
@@ -10,12 +11,13 @@ export default function MainContent() {
         <Main>
           <Header />
           <DayContent />
-          <Logo>
-            <div>
-              <p>ⓒ 2023 LikeLion 11th x FePe</p>
-            </div>
-          </Logo>
         </Main>
+        <Banner />
+        <Logo>
+          <div>
+            <p>ⓒ 2023 LikeLion 11th x FePe</p>
+          </div>
+        </Logo>
       </Container>
     </>
   );

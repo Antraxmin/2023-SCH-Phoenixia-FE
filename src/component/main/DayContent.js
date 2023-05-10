@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "styled-components";
+import Banner from "./Banner";
 
 export default function DayContent() {
   const settings = {
@@ -19,19 +20,21 @@ export default function DayContent() {
   };
 
   return (
-    <Carousel>
-      <Slider {...settings}>
-        <DayInfoBox>
-          <NewMoonDay />
-        </DayInfoBox>
-        <DayInfoBox>
-          <HalfMoonDay />
-        </DayInfoBox>
-        <DayInfoBox>
-          <FullMoonDay />
-        </DayInfoBox>
-      </Slider>
-    </Carousel>
+    <>
+      <Carousel>
+        <Slider {...settings}>
+          <DayInfoBox>
+            <NewMoonDay />
+          </DayInfoBox>
+          <DayInfoBox>
+            <HalfMoonDay />
+          </DayInfoBox>
+          <DayInfoBox>
+            <FullMoonDay />
+          </DayInfoBox>
+        </Slider>
+      </Carousel>
+    </>
   );
 }
 
