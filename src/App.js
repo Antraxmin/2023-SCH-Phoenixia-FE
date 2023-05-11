@@ -10,6 +10,7 @@ import FoodTruckDetail from "./component/FoodTruck/FoodTruckDetail";
 import ReactGA from "react-ga";
 import { useEffect } from "react";
 import Notice from "./component/notice/Notice";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   useEffect(() => {
