@@ -3,8 +3,6 @@ import DayContent from "./DayContent";
 import Header from "../layout/header/Header";
 import styled from "styled-components";
 import Banner from "./Banner";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 
 export default function MainContent() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -15,15 +13,6 @@ export default function MainContent() {
           <Header />
           <DayContent />
         </Main>
-        <ButtonArea>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfzsa42DeLrTeXoUWzXRyaqzj9AGyXaXIIaxcAs0BkAb1VRiQ/viewform"
-            target="_blank"
-          >
-            <Button variant="primary">설문에 참여하고 경품 받자!</Button>
-          </a>
-        </ButtonArea>
-
         <Banner />
         <Logo>
           <div>
